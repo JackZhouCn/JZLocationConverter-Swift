@@ -69,4 +69,4 @@ github "JackZhouCn/JZLocationConverter-Swift"
 
 ### 4、默认的边境线数据范围
 
-<img src="FAF6739F-A027-411B-BAA8-4B6B1485E374.png" width="50%" height="50%">
+<img src="FAF6739F-A027-411B-BAA8-4B6B1485E374.png" width="100%" height="100%">
