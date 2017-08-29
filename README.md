@@ -13,7 +13,7 @@ WGS-84世界标准坐标、GCJ-02中国国测局(火星坐标)、BD-09百度坐�
 github "JackZhouCn/JZLocationConverter-Swift"
 ```
 
-## 1、在APP启动时加载[边境线数据](#关于边境线数据)：
+## 1、在APP启动时加载[大陆边境线数据](#关于大陆边境线数据)：
 ```swift
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         JZLocationConverter.start(filePath: Bundle(for:JZAreaManager.self).path(forResource: "GCJ02", ofType: "json")) { (error:JZFileError?) in
@@ -60,13 +60,13 @@ github "JackZhouCn/JZLocationConverter-Swift"
 ```swift
     public func bd09ToGcj02(_ bd09Point:CLLocationCoordinate2D,result:@escaping (_ gcj02Point:CLLocationCoordinate2D) -> Void)
 ```
-# 关于边境线数据
+# 关于大陆边境线数据
 ### 1、默认的边境线数据位于项目的GCJ02.json文件中
 
 ### 2、默认的边境线数据来自「百度地图」API并转换到GCJ02
 
 ### 3、如果你需要使用自己的边境线数据（需要GCJ02坐标），只需要在[启动](#1%E5%9C%A8app%E5%90%AF%E5%8A%A8%E6%97%B6%E5%8A%A0%E8%BD%BD%E8%BE%B9%E5%A2%83%E7%BA%BF%E6%95%B0%E6%8D%AE)时加载自己的数据即可
 
-### 4、默认的边境线数据范围
+### 4、默认的大陆边境线数据范围
 
 <img src="FAF6739F-A027-411B-BAA8-4B6B1485E374.png" width="100%" height="100%">
