@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name         = "JZLocationConverter-Swift"
+  s.name         = "JZLocationConverterSwift"
   s.version      = "1.0.0"
   s.summary      = "WGS-84世界标准坐标、GCJ-02中国国测局(火星坐标)、BD-09百度坐标系转换"
 
