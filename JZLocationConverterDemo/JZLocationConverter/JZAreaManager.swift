@@ -23,6 +23,49 @@ open class JZAreaManager {
         return JZAreaManager()
     }()
     
+    public static func start(finished:((_ error:JZFileError?) -> Void)?) {
+        JZAreaManager.default.queue.async {
+            guard let filePath = Bundle(for:JZAreaManager.self).path(forResource: "GCJ02", ofType: "json") else {
+                DispatchQueue.main.async {
+                    if finished != nil {
+                        finished!(JZFileError.FileNotFound)
+                    }
+                }
+                return
+            }
+            guard let jsonString = try? String(contentsOfFile: filePath) else {
+                DispatchQueue.main.async {
+                    if finished != nil {
+                        finished!(JZFileError.EmptyData)
+                    }
+                }
+                return
+            }
+            guard let data = jsonString.data(using: .utf8) else {
+                DispatchQueue.main.async {
+                    if finished != nil {
+                        finished!(JZFileError.invalidData)
+                    }
+                }
+                return
+            }
+            guard let array = try? JSONSerialization.jsonObject(with: data, options: []) else {
+                DispatchQueue.main.async {
+                    if finished != nil {
+                        finished!(JZFileError.invalidData)
+                    }
+                }
+                return
+            }
+            JZAreaManager.default.points = array as? Array<Array<Double>>
+            DispatchQueue.main.async {
+                if finished != nil {
+                    finished!(nil)
+                }
+            }
+        }
+    }
+    
     public static func start(filePath:String!,finished:((_ error:JZFileError?) -> Void)?) {
         JZAreaManager.default.queue.async {
             guard let jsonString = try? String(contentsOfFile: filePath) else {
