@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "JZLocationConverterSwift"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "WGS-84世界标准坐标、GCJ-02中国国测局(火星坐标)、BD-09百度坐标系转换"
 
   s.homepage     = "https://github.com/JackZhouCn/JZLocationConverter-Swift"
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.author    = "JackZhouCn"
   s.social_media_url   = "https://twitter.com/JackZhou__"
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/JackZhouCn/JZLocationConverter-Swift.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/JackZhouCn/JZLocationConverter-Swift.git", :tag => "1.0.1" }
 
   s.source_files  = "JZLocationConverterDemo/JZLocationConverter/**/*.swift"
 
