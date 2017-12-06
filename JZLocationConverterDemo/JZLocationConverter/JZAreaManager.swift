@@ -23,6 +23,22 @@ open class JZAreaManager {
         return JZAreaManager()
     }()
     
+    public static func start(finished:((_ error:JZFileError?) -> Void)?) {
+        guard let filePath = Bundle(for:JZAreaManager.self).path(forResource: "GCJ02", ofType: "json") else {
+            DispatchQueue.main.async {
+                if finished != nil {
+                    finished!(JZFileError.FileNotFound)
+                }
+            }
+            return
+        }
+        start(filePath: filePath) { error in
+            if finished != nil{
+                finished!(error)
+            }
+        }
+    }
+    
     public static func start(filePath:String!,finished:((_ error:JZFileError?) -> Void)?) {
         JZAreaManager.default.queue.async {
             guard let jsonString = try? String(contentsOfFile: filePath) else {
