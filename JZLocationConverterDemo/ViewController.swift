@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         mapView.addGestureRecognizer(p)
     }
     
-    func press(recognizer:UIGestureRecognizer) -> Void {
+    @objc func press(recognizer:UIGestureRecognizer) -> Void {
         if recognizer.state == .began {
             let touchPoint:CGPoint = recognizer.location(in: mapView)
             let touchMapCoordinate:CLLocationCoordinate2D = mapView.convert(touchPoint, toCoordinateFrom: mapView)

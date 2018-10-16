@@ -41,11 +41,11 @@ open class JZLocationConverter {
         return JZLocationConverter()
     }()
     
-    open static func start(filePath:String!,finished:((_ error:JZFileError?) -> Void)?) {
+    public static func start(filePath:String!,finished:((_ error:JZFileError?) -> Void)?) {
         JZAreaManager.start(filePath: filePath, finished: finished)
     }
     
-    open static func start(finished:((_ error:JZFileError?) -> Void)?) {
+    public static func start(finished:((_ error:JZFileError?) -> Void)?) {
         JZAreaManager.start(finished: finished)
     }
 

@@ -14,9 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        JZLocationConverter.start(filePath: Bundle(for:JZAreaManager.self).path(forResource: "GCJ02", ofType: "json")) { (error:JZFileError?) in
+        JZLocationConverter.start { (error) in
             if error != nil {
                 print("失败")
             }else {

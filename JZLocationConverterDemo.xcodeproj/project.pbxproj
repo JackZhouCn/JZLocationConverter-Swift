@@ -11,7 +11,6 @@
 		B836FEBC1F4C02B400296412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B836FEB11F4C02B400296412 /* Assets.xcassets */; };
 		B836FEBD1F4C02B400296412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B836FEB21F4C02B400296412 /* LaunchScreen.storyboard */; };
 		B836FEBE1F4C02B400296412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B836FEB41F4C02B400296412 /* Main.storyboard */; };
-		B836FEBF1F4C02B400296412 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B836FEB61F4C02B400296412 /* Info.plist */; };
 		B836FEC01F4C02B400296412 /* JZLocationConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836FEB81F4C02B400296412 /* JZLocationConverter.swift */; };
 		B836FEC21F4C02B400296412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836FEBA1F4C02B400296412 /* ViewController.swift */; };
 		B836FEC41F4C59F200296412 /* GCJ02.json in Resources */ = {isa = PBXBuildFile; fileRef = B836FEC31F4C59F200296412 /* GCJ02.json */; };
@@ -37,7 +36,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		B836FEF01F4DB4B300296412 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -198,13 +197,13 @@
 					B836FF401F4E6CBF00296412 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = P4493XW734;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					B8F5FC9F1F20B5BB0097F290 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = P4493XW734;
-						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -241,7 +240,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B836FEC41F4C59F200296412 /* GCJ02.json in Resources */,
-				B836FEBF1F4C02B400296412 /* Info.plist in Resources */,
 				B836FEBE1F4C02B400296412 /* Main.storyboard in Resources */,
 				B836FEBC1F4C02B400296412 /* Assets.xcassets in Resources */,
 				B836FEBD1F4C02B400296412 /* LaunchScreen.storyboard in Resources */,
@@ -318,7 +316,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JZ.JZLocationConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -341,7 +340,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JZ.JZLocationConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -448,14 +448,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = P4493XW734;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/JZLocationConverterDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JZ.JZLocationConverterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -465,13 +468,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = P4493XW734;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/JZLocationConverterDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JZ.JZLocationConverterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -485,6 +491,7 @@
 				B836FF4C1F4E6CBF00296412 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8F5FC9B1F20B5BB0097F290 /* Build configuration list for PBXProject "JZLocationConverterDemo" */ = {
 			isa = XCConfigurationList;
