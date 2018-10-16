@@ -5,7 +5,7 @@ WGS-84世界标准坐标、GCJ-02中国国测局(火星坐标)、BD-09百度坐�
 [![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)](https://swift.org)
 [![Xcode](https://img.shields.io/badge/Xcode-8.3-blue.svg)](https://developer.apple.com/xcode)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods](https://img.shields.io/cocoapods/v/JZLocationConverter-Swift.svg)](https://cocoapods.org)
+[![CocoaPods](https://img.shields.io/cocoapods/v/JZLocationConverterSwift.svg)](https://cocoapods.org)
 # Demo
 
 <img src="1.gif" width="50%" height="50%">
@@ -16,6 +16,13 @@ WGS-84世界标准坐标、GCJ-02中国国测局(火星坐标)、BD-09百度坐�
 
 ```
 github "JackZhouCn/JZLocationConverter-Swift"
+```
+或
+
+### 支持 [CocoaPods](https://cocoapods.org/)，添加以下代码到你的Podfile文件中:
+
+```
+pod 'JZLocationConverterSwift'
 ```
 
 ## 1、在APP启动时加载[大陆边境线数据](#关于大陆边境线数据)：
