@@ -2,8 +2,8 @@ WGS-84世界标准坐标、GCJ-02中国国测局(火星坐标)、BD-09百度坐�
 ===================
 
 [![iOS](https://img.shields.io/badge/iOS-8.0%2B-green.svg)](https://apple.com)
-[![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)](https://swift.org)
-[![Xcode](https://img.shields.io/badge/Xcode-8.3-blue.svg)](https://developer.apple.com/xcode)
+[![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org)
+[![Xcode](https://img.shields.io/badge/Xcode-10.0-blue.svg)](https://developer.apple.com/xcode)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/v/JZLocationConverterSwift.svg)](https://cocoapods.org)
 # Demo
@@ -27,8 +27,9 @@ pod 'JZLocationConverterSwift'
 
 ## 1、在APP启动时加载[大陆边境线数据](#关于大陆边境线数据)：
 ```swift
+    //默认边境线数据
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        JZLocationConverter.start(filePath: Bundle(for:JZAreaManager.self).path(forResource: "GCJ02", ofType: "json")) { (error:JZFileError?) in
+        JZLocationConverter.start { (error) in
             if error != nil {
                 print("失败")
             }else {
@@ -39,6 +40,22 @@ pod 'JZLocationConverterSwift'
     }
 
 ```
+或者 
+
+```swift
+    //自定义边境线数据
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        JZLocationConverter.start(filePath: Bundle.main.path(forResource: "xx", ofType: "json")) { (error:JZFileError?) in
+            if error != nil {
+                print("失败")
+            }else {
+                print("成功")
+            }
+        }
+        return true
+    }
+```
+
 ## 2、转换方法都在转换工具单例类内
 ```swift
     JZLocationConverter.default
