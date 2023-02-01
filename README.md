@@ -6,6 +6,7 @@ WGS-84世界标准坐标、GCJ-02中国国测局(火星坐标)、BD-09百度坐�
 [![Xcode](https://img.shields.io/badge/Xcode-10.0-blue.svg)](https://developer.apple.com/xcode)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/v/JZLocationConverterSwift.svg)](https://cocoapods.org)
+![License](https://img.shields.io/badge/license-MIT-yellow)
 # Demo
 
 <img src="1.gif" width="50%" height="50%">
